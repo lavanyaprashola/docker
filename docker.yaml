@@ -1,0 +1,27 @@
+---
+
+- hosts: docker
+
+  tasks:
+
+  - name: install docker
+
+    become: true
+
+    yum:
+
+      name: docker
+
+      state: present
+
+  - name: start service
+
+    become: true
+
+    service:
+
+      name: docker
+
+      state: started
+
+  
