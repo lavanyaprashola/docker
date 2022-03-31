@@ -6,7 +6,7 @@
 
   - name: install docker
 
-    become: true
+    become: false
 
     yum:
 
@@ -16,7 +16,7 @@
 
   - name: start service
 
-    become: true
+    become: false
 
     service:
 
